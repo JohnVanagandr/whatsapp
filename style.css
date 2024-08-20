@@ -277,3 +277,79 @@ header .action a {
 .seen .imgbx {
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
 }
+
+/* Calls */
+
+.green {
+  background-color: #008069;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5em;
+  rotate: -45deg;
+}
+
+.incoming ion-icon {
+  color: #0f0;
+  rotate: 45deg;
+}
+
+.outgoing ion-icon {
+  color: #f00;
+  rotate: 45deg;
+}
+
+.call {
+  font-size: 1.5em;
+  color: #008069;
+}
+
+/* Buttons */
+
+.quickBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10000;
+}
+
+.quickBtn .btn {
+  background-color: #008069;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.35em;
+  cursor: pointer;
+  display: none;
+}
+
+.tabs input:nth-child(1):checked~.quickBtn .btn:nth-child(1) {
+  display: flex;
+}
+
+.tabs input:nth-child(2):checked~.quickBtn .btn:nth-child(2) {
+  display: flex;
+}
+
+.tabs input:nth-child(3):checked~.quickBtn .btn:nth-child(3) {
+  display: flex;
+}
+
+.quickBtn .btn .pencil{
+  position: absolute;
+  top:  -50px;
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.75em;
+  color: #333;
+}
