@@ -202,8 +202,8 @@ header .action a {
   align-items: center;
 }
 
-.chatlis .block .details p{
-  color:  #555;
+.chatlis .block .details p {
+  color: #555;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   font-size: 0.9em;
@@ -212,17 +212,17 @@ header .action a {
   -webkit-box-orient: vertical;
 }
 
-.chatlis .block.unread .details .listHead .time{
+.chatlis .block.unread .details .listHead .time {
   color: #06d755;
 }
 
-.chatlis .block.unread .details p{
+.chatlis .block.unread .details p {
   color: #111;
   font-weight: 600;
 }
 
 .message_p b {
-  background-color: #06d755; 
+  background-color: #06d755;
   color: #fff;
   min-width: 20px;
   height: 20px;
@@ -232,12 +232,48 @@ header .action a {
   align-items: center;
   font-size: 0.75em;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   width: 5px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
   background: transparent;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
   background: #bbb;
+}
+
+/* Status */
+.status .plus {
+  position: absolute;
+  top: 38px;
+  left: 40px;
+  width: 25px;
+  height: 25px;
+  background-color: #008069;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.box label {
+  padding: 0 15px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.85em;
+}
+
+.unseen .imgbx {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #008069;
+}
+
+.seen .imgbx {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
 }
