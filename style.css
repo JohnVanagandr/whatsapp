@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f2eadf;
+}
+
+.container {
+  position: relative;
+  width: 340px;
+  height: 600px;
+  background-color: #f2eaff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  background-color: #008069;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+header .action {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+
+header .action a {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.tabs input {
+  visibility: hidden;
+  display: none;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  background-color: #008069;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.buttons label {
+  width: 33.33%;
+  color: #fff;
+  opacity: 0.75;
+  text-align: center;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.tabs input:nth-child(1):checked~.buttons label:nth-child(1),
+.tabs input:nth-child(2):checked~.buttons label:nth-child(2),
+.tabs input:nth-child(3):checked~.buttons label:nth-child(3) {
+  opacity: 1;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 33.33%;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.tabs input:nth-child(1):checked~.buttons .underline {
+  left: 0;
+}
+
+.tabs input:nth-child(2):checked~.buttons .underline {
+  left: 33.333%;
+}
+
+.tabs input:nth-child(3):checked~.buttons .underline {
+  left: 66.66%;
+}
+
+.content {
+  position: relative;
+  width: calc(340px * 3);
+  display: flex;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+.content .box {
+  position: relative;
+  width: 340px;
+}
+
+.tabs input:nth-child(1):checked~.content {
+  left: calc(340px * 0);
+}
+
+.tabs input:nth-child(2):checked~.content {
+  left: calc(340px * -1);
+}
+
+.tabs input:nth-child(3):checked~.content {
+  left: calc(340px * -2);
+}
