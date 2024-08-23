@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WhatsApp</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/whatsApp.png" type="image/png">
 </head>
 <body>
 
@@ -49,20 +50,20 @@
             <ion-icon name="call"></ion-icon>
           </div>
         </div>
-
+        <!-- Content -->
       <div class="content">
         <!-- Sección chats -->
         <div class="box chats">
           <div class="data">
             <div class="chatlis">
-              <div class="block unread">
+              <div class="block unread open">
                 <div class="imgbx">
                   <img src="img/img1.jpg" alt="img">
                 </div>
                 <div class="details">
                   <div class="listHead">
                     <h4>Alex Smith</h4>
-                    <p class="time">10:56</p>
+                    <p class="time">11:29</p>
                   </div>
                   <div class="message_p">
                     <p>No tenemos ese servicio en la empresa</p>
@@ -89,7 +90,7 @@
                 </div>
               </div>
 
-              <div class="block">
+              <div class="block ">
                 <div class="imgbx">
                   <img src="img/img3.jpg" alt="img">
                 </div>
@@ -104,7 +105,7 @@
                 </div>
               </div>
 
-              <div class="block">
+              <div class="block ">
                 <div class="imgbx">
                   <img src="img/img4.jpg" alt="img">
                 </div>
@@ -119,7 +120,7 @@
                 </div>
               </div>
 
-              <div class="block">
+              <div class="block ">
                 <div class="imgbx">
                   <img src="img/img5.jpg" alt="img">
                 </div>
@@ -134,7 +135,7 @@
                 </div>
               </div>
 
-              <div class="block unread">
+              <div class="block unread ">
                 <div class="imgbx">
                   <img src="img/img6.jpg" alt="img">
                 </div>
@@ -150,7 +151,7 @@
                 </div>
               </div>
 
-              <div class="block unread">
+              <div class="block unread ">
                 <div class="imgbx">
                   <img src="img/img7.jpg" alt="img">
                 </div>
@@ -166,7 +167,7 @@
                 </div>
               </div>
 
-              <div class="block unread">
+              <div class="block unread ">
                 <div class="imgbx">
                   <img src="img/img8.jpg" alt="img">
                 </div>
@@ -182,7 +183,7 @@
                 </div>
               </div>
 
-              <div class="block unread">
+              <div class="block unread ">
                 <div class="imgbx">
                   <img src="img/img9.jpg" alt="img">
                 </div>
@@ -201,6 +202,7 @@
             </div>
           </div>
         </div>
+        <!-- Status -->
         <div class="box status">
           <div class="data">
             <div class="chatlis">
@@ -281,6 +283,7 @@
             </div>
           </div>
         </div>
+        <!-- Call -->
         <div class="box calls">
           <div class="data">
 
@@ -339,12 +342,44 @@
           </div>
         </div>
       </div>
-      
     </div>
+    <!-- Chatbox -->
+     <div class="chatbox hide">
+      <div class="chat_header">
+        <div class="imgcontent">
+          <ion-icon name="arrow-back-sharp" class="back"></ion-icon>
+          <div class="imgbx">
+            <img src="img/img1.jpg" alt="persona">
+          </div>
+          <h3>Alex Smit<br><span>Online</span></h3>
+        </div>
+        <div class="actionbtns">
+          <ion-icon name="videocam"></ion-icon>
+          <ion-icon name="call"></ion-icon>
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+        </div>
+      </div>
+      <div class="messagebox">
+        <div class="message">
+          Hola muchachos, hoy estamos trabajando un clon de WhatsApp con css y html en el SENA<span class="time">11:29</span></div>
+          <div class="messageinput">
+            <div class="input">
+              <ion-icon name="happy-outline" class="deg45"></ion-icon>
+              <input type="text" placeholder="Message">
+              <ion-icon name="attach"></ion-icon>
+              <ion-icon name="camera"></ion-icon>
+            </div>
+            <div class="mic">
+              <ion-icon name="mic"></ion-icon>
+            </div>
+          </div>
+      </div>
+     </div>
   </div>
   
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
