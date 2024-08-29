@@ -52,6 +52,13 @@ header .action a {
   text-decoration: none;
   font-size: 1.5em;
 }
+/* 
+definimos una variable de alcance local 
+solo estara presente en las eqtiquetas con la clase tabs y sus hijas
+*/
+.tabs {
+  --left: 0;
+}
 
 .tabs input {
   visibility: hidden;
@@ -118,16 +125,35 @@ header .action a {
   width: 340px;
 }
 
+/* 
+Validamos cual de los tres inputs esta chequeado y recalculamos el left o moviento de la caja
+*/
+
+.tabs:has(input:nth-child(1):checked) {
+  --left: calc(340px * 0);
+}
+.tabs:has(input:nth-child(2):checked) {
+  --left: calc(340px * -1);
+}
+.tabs:has(input:nth-child(3):checked) {
+  --left: calc(340px * -2);
+}
+
+/* Leemos la variable de alcance local */
+.content {
+  left: var(--left);
+}
+
 .tabs input:nth-child(1):checked~.content {
-  left: calc(340px * 0);
+  /* left: calc(340px * 0); */
 }
 
 .tabs input:nth-child(2):checked~.content {
-  left: calc(340px * -1);
+  /* left: calc(340px * -1); */
 }
 
 .tabs input:nth-child(3):checked~.content {
-  left: calc(340px * -2);
+  /* left: calc(340px * -2); */
 }
 
 /* Chats */
@@ -368,7 +394,7 @@ header .action a {
   /* display: none; */
 }
 
-.chatbox.hide{
+.chatbox.hide {
   display: none;
 }
 
@@ -525,6 +551,6 @@ ion-icon {
   cursor: pointer;
 }
 
-.deg45{
+.deg45 {
   rotate: 45deg;
 }
